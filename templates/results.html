@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Image Classification Result</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .banner-img {
+            background-image: url('https://cdn.pixabay.com/photo/2017/01/24/03/53/plant-2004483_1280.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            height: 100%;
+            filter: blur(5px);
+        }
+
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+             width: 45%;
+            /*padding: 40px 20px; */
+            text-align: center;
+            border-radius: 70px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            font-weight: bold;
+        }
+
+
+        /* // body {
+//   background: #000405;
+//   min-height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   color: #fff;
+//   */
+
+p {
+  font-size: 8vw;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  font-family: 'Work Sans', sans-serif;
+ font-weight: 900;
+
+}
+
+.fancy {
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    background-image:
+      url("https://media.istockphoto.com/id/1164221262/photo/gray-shadow-of-the-leaves-on-a-white-wall.webp?b=1&s=612x612&w=0&k=20&c=LJ82zHbWt3oh1eP_SSzHv1gzAE-br0Et52GdSeNIEbs=");
+    background-size: 110% auto;
+    background-position: center;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+} </style>
+</head>
+<body>
+    <div class="banner-img"></div>
+    <div class="banner-text">
+        <p> <span class="fancy">Result</span></p>
+         <p style="font-size: 18px;">This image most likely belongs to {{result}} with {{percentage}} .</p>
+
+    </div>
+</body>
+</html>
+
+
